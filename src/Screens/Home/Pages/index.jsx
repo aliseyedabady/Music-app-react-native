@@ -1,5 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {
+  StyleSheet,
+  ImageBackground,
+  View,
+  TouchableOpacity,
+  FlatList,
+} from 'react-native';
+import Layout from '../../../Components/Layout';
+import CustomText from '../../../Components/CustomText';
 
 const Index = () => {
   return (
