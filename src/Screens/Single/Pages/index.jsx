@@ -2,7 +2,12 @@ import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import Layout from '../../../Screens/Single/Pages';
 import CustomText from '../../../Components/CustomText';
-import {THEME_COLOR} from '../../../Common/Utils';
+import {THEME_COLOR, YELLOW} from '../../../Common/Utils';
+// Entypo Feather
+import Entypo from 'react-native-vector-icons/Entypo';
+import Feather from 'react-native-vector-icons/Entypo';
+
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Index = ({route}) => {
   const {item} = route.params;
@@ -10,7 +15,11 @@ const Index = ({route}) => {
   return (
     <View style={{backgroundColor: THEME_COLOR, flex: 1}}>
       <View>
-        <View></View>
+        <View>
+          <Entypo color={THEME_COLOR} name="chevron-left" size={20} />
+          {/* chevron-down */}
+          <Entypo color={THEME_COLOR} name="chevron-down" size={20} />
+        </View>
       </View>
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
         <Image
@@ -27,9 +36,27 @@ const Index = ({route}) => {
         </View>
         <View>{/* Slider */}</View>
         <View>
-          <View>{/* Shuffle */}</View>
-          <View>{/* Play Btn */}</View>
-          <View>{/* Repeat */}</View>
+          <View>
+            {/* MaterialCommunityIcons */}
+            <MaterialCommunityIcons color={YELLOW} name="shuffle" size={20} />
+
+            {/* Shuffle */}
+          </View>
+          <View>
+            {/* Play Btn */}
+            <MaterialCommunityIcons
+              color={YELLOW}
+              name="skip-previous"
+              size={20}
+            />
+            <Entypo color={YELLOW} name="controller-play" size={20} />
+            <MaterialCommunityIcons color={YELLOW} name="skip-next" size={20} />
+          </View>
+          <View>
+            {/* Repeat */}
+            <Feather color={YELLOW} name="repeat" size={20} />
+            {/* repeat */}
+          </View>
         </View>
         <View>
           <View></View>
