@@ -57,6 +57,46 @@ const Index = () => {
               singer: 'AaRon',
               url: require('../../../assets/images/d.jpeg'),
             },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
+            {
+              name: 'U-Turn (Lili)',
+              singer: 'AaRon',
+              url: require('../../../assets/images/d.jpeg'),
+            },
           ]}
           renderItem={SongItem}
         />
@@ -74,18 +114,26 @@ const SongItem = ({item}) => {
           flexDirection: 'row',
           // backgroundColor: 'red',
           justifyContent: 'flex-start',
+          marginVertical: 10,
         }}>
         <View>
           <Image
             style={{
               resizeMode: 'contain',
-              height: 140,
-              width: 150,
+              height: 90,
+              width: 90,
+              borderRadius: 50,
             }}
             source={item.url}
           />
         </View>
-        <View style={{}}>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 20,
+          }}>
           <View>
             <View>
               <CustomText>{item.name}</CustomText>
