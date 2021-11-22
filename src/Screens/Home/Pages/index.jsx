@@ -54,38 +54,8 @@ const Index = () => {
               singer: 'AaRon',
               url: require('./src/assets/images/item1.jpg'),
             },
-            // { name: "illusion", singer: "Soen", url: require('./src/assets/images/d.jpg') },
           ]}
-          renderItem={({item}) => (
-            <View
-              style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <View>
-                {/* <Image
-                style={{
-
-                  resizeMode: 'contain',
-                  height: 140
-
-                }}
-                source={item.url}
-              /> */}
-              </View>
-              <View>
-                <View>
-                  <CustomText>{item.name}</CustomText>
-                </View>
-                <View>
-                  <CustomText size={'ssm'}>{item.singer}</CustomText>
-                </View>
-              </View>
-              <View style={{flexDirection: 'row'}}>
-                <View>
-                  <CustomText weight="sm">3 Rate</CustomText>
-                </View>
-                <CustomText>..</CustomText>
-              </View>
-            </View>
-          )}
+          renderItem={SongItem}
         />
       </View>
     </Layout>
@@ -93,5 +63,37 @@ const Index = () => {
 };
 
 export default Index;
-
+const SongItem = ({item}) => {
+  return (
+    <>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View>
+          {/* <Image
+                style={{
+                  
+                  resizeMode: 'contain',
+                  height: 140
+                  
+                }}
+                source={item.url}
+              /> */}
+        </View>
+        <View>
+          <View>
+            <CustomText>{item.name}</CustomText>
+          </View>
+          <View>
+            <CustomText size={'ssm'}>{item.singer}</CustomText>
+          </View>
+        </View>
+        <View style={{flexDirection: 'row'}}>
+          <View>
+            <CustomText weight="sm">3 Rate</CustomText>
+          </View>
+          <CustomText>..</CustomText>
+        </View>
+      </View>
+    </>
+  );
+};
 const styles = StyleSheet.create({});
