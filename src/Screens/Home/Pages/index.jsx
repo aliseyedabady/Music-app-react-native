@@ -3,11 +3,14 @@ import {
   StyleSheet,
   ImageBackground,
   View,
+  Image,
   TouchableOpacity,
   FlatList,
+  Text,
 } from 'react-native';
 import Layout from '../../../Components/Layout';
 import CustomText from '../../../Components/CustomText';
+import {PINK} from '../../../Common/Utils/index';
 
 const Index = () => {
   return (
@@ -21,7 +24,7 @@ const Index = () => {
           paddingHorizontal: 30,
         }}
         resizeMode="cover"
-        source={require('./src/assets/images/m1.jpg')}>
+        source={require('../../../assets/images/m1.jpg')}>
         <View>
           <CustomText>Your Weekly</CustomText>
         </View>
@@ -52,7 +55,7 @@ const Index = () => {
             {
               name: 'U-Turn (Lili)',
               singer: 'AaRon',
-              url: require('./src/assets/images/item1.jpg'),
+              url: require('../../../assets/images/d.jpeg'),
             },
           ]}
           renderItem={SongItem}
@@ -66,31 +69,37 @@ export default Index;
 const SongItem = ({item}) => {
   return (
     <>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      <View
+        style={{
+          flexDirection: 'row',
+          // backgroundColor: 'red',
+          justifyContent: 'flex-start',
+        }}>
         <View>
-          {/* <Image
-                style={{
-                  
-                  resizeMode: 'contain',
-                  height: 140
-                  
-                }}
-                source={item.url}
-              /> */}
+          <Image
+            style={{
+              resizeMode: 'contain',
+              height: 140,
+              width: 150,
+            }}
+            source={item.url}
+          />
         </View>
-        <View>
+        <View style={{}}>
           <View>
-            <CustomText>{item.name}</CustomText>
+            <View>
+              <CustomText>{item.name}</CustomText>
+            </View>
+            <View>
+              <CustomText size={'ssm'}>{item.singer}</CustomText>
+            </View>
           </View>
-          <View>
-            <CustomText size={'ssm'}>{item.singer}</CustomText>
+          <View style={{flexDirection: 'row'}}>
+            <View>
+              <CustomText weight="sm">3 Rate</CustomText>
+            </View>
+            <CustomText>..</CustomText>
           </View>
-        </View>
-        <View style={{flexDirection: 'row'}}>
-          <View>
-            <CustomText weight="sm">3 Rate</CustomText>
-          </View>
-          <CustomText>..</CustomText>
         </View>
       </View>
     </>

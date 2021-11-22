@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {WHITE} from '../../Common/Utils';
 
 const Index = ({children, size, weight}) => {
   const renderSize = () => {
