@@ -10,7 +10,9 @@ import {
 } from 'react-native';
 import Layout from '../../../Components/Layout';
 import CustomText from '../../../Components/CustomText';
-import {PINK} from '../../../Common/Utils/index';
+import {PINK, WHITE, YELLOW} from '../../../Common/Utils/index';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Index = () => {
   return (
@@ -115,6 +117,9 @@ const SongItem = ({item}) => {
           // backgroundColor: 'red',
           justifyContent: 'flex-start',
           marginVertical: 10,
+          borderBottomWidth: 2,
+          paddingBottom: 10,
+          borderColor: '#17171F',
         }}>
         <View>
           <Image
@@ -142,11 +147,23 @@ const SongItem = ({item}) => {
               <CustomText size={'ssm'}>{item.singer}</CustomText>
             </View>
           </View>
-          <View style={{flexDirection: 'row'}}>
-            <View>
-              <CustomText weight="sm">3 Rate</CustomText>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <CustomText size="sm">3</CustomText>
+              <MaterialCommunityIcons
+                backgroundColor={YELLOW}
+                color={YELLOW}
+                name="star"
+                size={20}
+              />
             </View>
-            <CustomText>..</CustomText>
+            <View style={{marginHorizontal: 8}}>
+              <MaterialCommunityIcons
+                color={WHITE}
+                name="dots-horizontal"
+                size={20}
+              />
+            </View>
           </View>
         </View>
       </View>
