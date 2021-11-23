@@ -29,6 +29,7 @@ const Index = ({route}) => {
             flexDirection: 'row',
 
             marginHorizontal: 10,
+
             marginBottom: 120,
 
             paddingTop: 20,
