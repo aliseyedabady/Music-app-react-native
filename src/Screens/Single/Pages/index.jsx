@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import Layout from '../../../Screens/Single/Pages';
 import CustomText from '../../../Components/CustomText';
@@ -6,11 +6,16 @@ import {THEME_COLOR, YELLOW, WHITE, PINK} from '../../../Common/Utils';
 // Entypo Feather
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
+import Slider from '@react-native-community/slider';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Index = ({route}) => {
   const {item} = route.params;
+  const [state, setstate] = useState({
+    min: 0,
+    max: 50,
+  });
 
   return (
     <View
@@ -29,7 +34,6 @@ const Index = ({route}) => {
           <View>
             <Entypo color={WHITE} name="chevron-left" size={20} />
           </View>
-          {/* chevron-down */}
           <View style={{flexDirection: 'row', marginLeft: 145}}>
             <CustomText size="sm">Favorites</CustomText>
             <Entypo color={WHITE} name="chevron-down" size={20} />
@@ -59,7 +63,23 @@ const Index = ({route}) => {
           </View>
         </View>
 
-        <View>{/* Slider */}</View>
+        <View
+          style={{
+            flexDirection: 'row-reverse',
+            alignItems: 'center',
+            marginHorizontal: 5,
+          }}>
+          <CustomText size="sm">{state.max}</CustomText>
+          <Slider
+            style={{height: 40, width: '90%'}}
+            minimumTrackTintColor={WHITE}
+            maximumTrackTintColor="#565660"
+            maximumValue={3}
+            minimumValue={0}
+            value={2}
+          />
+          <CustomText size="sm">{state.min}</CustomText>
+        </View>
         <View
           style={{
             justifyContent: 'space-between',
@@ -68,17 +88,13 @@ const Index = ({route}) => {
             marginHorizontal: 40,
           }}>
           <View>
-            {/* MaterialCommunityIcons */}
             <MaterialCommunityIcons color={WHITE} name="shuffle" size={26} />
-
-            {/* Shuffle */}
           </View>
           <View
             style={{
               flexDirection: 'row',
               alignItems: 'center',
             }}>
-            {/* Play Btn */}
             <MaterialCommunityIcons
               color={PINK}
               name="skip-previous"
@@ -98,9 +114,7 @@ const Index = ({route}) => {
             <MaterialCommunityIcons color={PINK} name="skip-next" size={40} />
           </View>
           <View>
-            {/* Repeat */}
             <Feather color={WHITE} name="repeat" size={23} />
-            {/* repeat */}
           </View>
         </View>
         <View>
