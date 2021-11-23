@@ -9,6 +9,8 @@ const Index = ({children, size, weight, align}) => {
         return 12;
       case 'ssm':
         return 10;
+      case 'md':
+        return 15;
       default:
         return 20;
     }
