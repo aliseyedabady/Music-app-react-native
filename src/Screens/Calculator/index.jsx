@@ -176,6 +176,7 @@ const App = () => {
         <View></View>
         <View></View>
         <View></View>
+        <View></View>
       </View>
     </View>
   );
