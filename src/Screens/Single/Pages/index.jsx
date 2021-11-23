@@ -28,8 +28,8 @@ const Index = ({route}) => {
           style={{
             flexDirection: 'row',
             marginHorizontal: 10,
-            
             marginBottom: 120,
+
             paddingTop: 20,
           }}>
           <View>
