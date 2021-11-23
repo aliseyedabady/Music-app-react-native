@@ -27,6 +27,7 @@ const Index = ({route}) => {
         <View
           style={{
             flexDirection: 'row',
+
             marginHorizontal: 10,
             marginBottom: 120,
 
