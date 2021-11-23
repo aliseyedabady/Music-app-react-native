@@ -21,6 +21,7 @@ const Index = ({route}) => {
     <View
       style={{
         backgroundColor: THEME_COLOR,
+
         flex: 1,
       }}>
       <View>
