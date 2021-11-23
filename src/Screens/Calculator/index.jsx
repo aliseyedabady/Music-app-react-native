@@ -155,11 +155,6 @@ const App = () => {
             return calculaterStyle(num, index);
           })}
         </View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
       </View>
     </View>
   );
