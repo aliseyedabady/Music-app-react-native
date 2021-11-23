@@ -13,7 +13,7 @@ import CustomText from '../../../Components/CustomText';
 import {PINK, WHITE, YELLOW} from '../../../Common/Utils/index';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {useNavigation} from '@react-navigation/core';
+import {useNavigation} from '@react-navigation/native';
 import Song from '../../../Components/Song';
 
 const Index = () => {

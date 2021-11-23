@@ -4,7 +4,7 @@ import {WHITE, YELLOW} from '../../Common/Utils';
 import CustomText from '../CustomText';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {useNavigation} from '@react-navigation/core';
+import {useNavigation} from '@react-navigation/native';
 const index = ({item}) => {
   const navigation = useNavigation();
 
